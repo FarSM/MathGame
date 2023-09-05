@@ -1,13 +1,9 @@
 ﻿using MathGame.Models;
-using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace MathGame
-{
-    internal class Helpers
+namespace MathGame;
+
+internal class Helpers
     {
         static List<Game> games = new List<Game> {
         //new Game { date = DateTime.Now.AddDays(2), type = GameType.Addition, score = 5},
@@ -25,7 +21,6 @@ namespace MathGame
         //new Game { date = DateTime.Now.AddDays(14), type = GameType.Addition, score = 5},
         //new Game { date = DateTime.Now.AddDays(15), type = GameType.Multiplication, score = 2},
         //new Game { date = DateTime.Now.AddDays(16), type = GameType.Subtraction, score = 1},
-
     };
 
         internal static string isValidResult(string result)
@@ -37,6 +32,7 @@ namespace MathGame
             }
             return result;
         }
+
         internal static void WelcomeMessage()
         {
             DateTime date = DateTime.Now;
@@ -50,6 +46,7 @@ namespace MathGame
             Console.WriteLine($"Hello {name.Trim()}. Its {date.DayOfWeek}, {date}. Welcome to Math Game!!!\nPress any key to show the menu");
             Console.ReadLine();
         }
+
         internal static int LevelSelection(GameType gameType)
         {
             int choice;
@@ -62,6 +59,7 @@ namespace MathGame
 
             return choice = Int32.Parse(Console.ReadLine());
         }
+
         internal static void ViewGameHistory()
         {
             //List<Game> gamesToPrint = games.Where(x => x.type == GameType.Division).ToList();
@@ -78,6 +76,7 @@ namespace MathGame
             Console.ReadLine();
 
         }
+
         internal static void AddGames(int gamescore, GameType gameType, GameLevel gameLevel)
         {
             games.Add(new Game
@@ -88,6 +87,4 @@ namespace MathGame
                 date = DateTime.Now
             });
         }
-
     }
-}

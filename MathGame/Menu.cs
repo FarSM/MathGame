@@ -1,10 +1,7 @@
-﻿
+﻿using MathGame.Models;
 
-using MathGame.Models;
-
-namespace MathGame
-{
-    internal class Menu
+namespace MathGame;
+internal class Menu
     {
         internal void GameMenu()
         {
@@ -50,6 +47,4 @@ namespace MathGame
                 }
             } while (gameOn);
         }
-
     }
-}

@@ -1,14 +1,13 @@
 ﻿using MathGame.Models;
 using static MathGame.Helpers;
 
-namespace MathGame
-{
-    internal class GameEngine
+namespace MathGame;
+
+internal class GameEngine
     {
         internal void AdditionGame(GameType gameType)
         {
             int levelChoice = LevelSelection(gameType);
-
             switch (levelChoice)
             {
                 case 1:
@@ -24,12 +23,11 @@ namespace MathGame
                     Console.WriteLine("Enter a level");
                     break;
             }
-
         }
+
         private void AdditionGameLevel(GameLevel level, int minNum, int maxNum)
         {
             int score = 0;
-
             for (int i = 0; i < 5; i++)
             {
                 Console.Clear();
@@ -62,10 +60,10 @@ namespace MathGame
 
             Helpers.AddGames(score, GameType.Addition, level);
         }
+
         internal void SubtractionGame(GameType gameType)
         {
             int levelChoice = LevelSelection(gameType);
-
             switch (levelChoice)
             {
                 case 1:
@@ -81,12 +79,11 @@ namespace MathGame
                     Console.WriteLine("Enter a level");
                     break;
             }
-
         }
+
         private void SubtractionGameLevel(GameLevel level, int minNum, int maxNum)
         {
             int score = 0;
-
             for (int i = 0; i < 5; i++)
             {
                 Console.Clear();
@@ -117,10 +114,10 @@ namespace MathGame
             }
             Helpers.AddGames(score, GameType.Subtraction, level);
         }
+
         internal void MultiplicationGame(GameType gameType)
         {
             int levelChoice = LevelSelection(gameType);
-
             switch (levelChoice)
             {
                 case 1:
@@ -136,12 +133,11 @@ namespace MathGame
                     Console.WriteLine("Enter a level");
                     break;
             }
-
         }
+
         private void MultiplicationGameLevel(GameLevel level, int minNum, int maxNum)
         {
             int score = 0;
-
             for (int i = 0; i < 5; i++)
             {
                 Console.Clear();
@@ -172,10 +168,10 @@ namespace MathGame
             }
             Helpers.AddGames(score, GameType.Multiplication, level);
         }
+
         internal void DivisionGame(GameType gameType)
         {
             int levelChoice = LevelSelection(gameType);
-
             switch (levelChoice)
             {
                 case 1:
@@ -191,12 +187,11 @@ namespace MathGame
                     Console.WriteLine("Enter a level");
                     break;
             }
-
         }
+
         private void DivisionGameLevel(GameLevel level, int minNum, int maxNum)
         {
             int score = 0;
-
             for (int i = 0; i < 5; i++)
             {
                 Console.Clear();
@@ -229,11 +224,7 @@ namespace MathGame
                     Console.WriteLine("Press any key to go to the main menu");
                     Console.ReadLine();
                 }
-
             }
             Helpers.AddGames(score, GameType.Division, level);
         }
-       
-
     }
-}
